@@ -1,16 +1,16 @@
 import React from 'react'
 import { Image, StyleSheet, TouchableOpacity } from 'react-native';
-import { Container, Header, Content, Card, CardItem, Text, Body } from "native-base";
+import { Container, Header, Content, Card, CardItem, Text, Body, View } from "native-base";
 import { Actions } from 'react-native-router-flux';
 const CardList = ({ data }) => {
     return (
         <>
-            <Container style={styles.heades}>
+            <View style={styles.heades}>
                 {data.map((item) => {
                     return (
                         <>
-                            <Card transparent>
-                                <TouchableOpacity style={styles.touch} onPress={() => Actions.profile()} key={item.id}>
+                            <Card transparent key={item.id}>
+                                <TouchableOpacity style={styles.touch} onPress={() => Actions.profile()} >
                                     <CardItem style={styles.CardItem}>
                                         <Image
                                             source={{ uri: item.url }}
@@ -32,7 +32,7 @@ const CardList = ({ data }) => {
                     )
                 })}
 
-            </Container>
+            </View>
         </>
     )
 }

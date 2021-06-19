@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, View, StyleSheet, ScrollView, TouchableOpacity, TouchableHighlight } from 'react-native'
+import { Image, View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native'
 import {
     Card, Col, Item, Input, Container, Header, Content, Button, Text, CardItem, Left, Right, Body
 } from 'native-base';
@@ -13,7 +13,7 @@ const Main = () => {
     return (
         <>
 
-            <Container style={{ fontFamily: 'Kanit-Regular', backgroundColor: '#fff' }} >
+            <Container style={{ fontFamily: 'Kanit-Regular', backgroundColor: '#eeeeee' }} >
                 <Header androidStatusBarColor="#ff5722" searchBar rounded style={{ backgroundColor: '#ff5722' }}>
 
                     <Col style={styles.boxSearch}>
@@ -30,6 +30,7 @@ const Main = () => {
                     </Col>
                 </Header>
                 <Content>
+                {/* import Carouselmained from '../component/carou/Carouselmained'; */}
                     <Carouselmained />
                     <ScrollView
                         style={{ flex: 1 }}
@@ -47,7 +48,9 @@ const Main = () => {
                                 </CardItem>
                             </Card>
                         </Content>
+                        {/* import CardMain from '../component/Card/CardMain'; */}
                         <CardMain />
+                        
                     </ScrollView>
                 </Content>
             </Container>
